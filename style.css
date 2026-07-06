@@ -259,3 +259,97 @@ p {
 .fill-advanced { fill: #f97316; }
 .fill-elite { fill: #8b5cf6; }
 .fill-legendary { fill: #eab308; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+
+    /* Change sidebar to bottom nav */
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        z-index: 1000;
+        border-radius: 20px 20px 0 0;
+        border-bottom: none;
+    }
+
+    .logo {
+        display: none; /* Hide logo on mobile to save space */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    .nav-links li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 0;
+        font-size: 0.7rem;
+        justify-content: center;
+        border-left: none !important;
+        border-bottom: 3px solid transparent;
+        border-radius: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li.active a {
+        border-bottom: 3px solid var(--primary);
+        background: linear-gradient(to top, rgba(59, 130, 246, 0.2), transparent);
+    }
+
+    .nav-links li a i {
+        margin: 0;
+    }
+
+    /* Main Content Adjustments */
+    .main-content {
+        padding: 1rem;
+        margin-bottom: 80px; /* Space for bottom nav */
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    /* SVG maps */
+    .muscle-map {
+        width: 100%;
+        max-width: 130px;
+        height: auto;
+    }
+
+    /* Inputs */
+    .input-group input, .input-group select {
+        padding: 0.5rem;
+    }
+}
